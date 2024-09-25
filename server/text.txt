@@ -1,0 +1,256 @@
+International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426, April 2023  
+ 
+International Journal of Research Publication and Reviews  
+ 
+Journal homepage: www.ijrpr.com   ISSN 2582 -7421  
+ 
+ 
+Helmet  Wear  Detection for ATM Security  
+1K. Kasi Rao, 1K. Jeevan  Kumar , 1P. Gowtham, 1K. Aditya, 2Ch. RajaShekara Rao  
+1Student, Department of Electronics and Communication Engineering, A ditya institute of technology and management college , Tekkali , Srikakulam, 
+Andhra Pradesh, India, 532201  
+2Professor, Department of Electronics and Communication Engineering, A ditya institute of technology and management  College, Tekkali, Srikakulam, 
+Andhra Pradesh, India, 532201  
+ABSTRACT : 
+The Cash Machine (ATM) is a convenient way to withdraw cash and access other banking services, however because of the signifi cant danger involved, security 
+is recommended. The ATM Center's video surveillance system typically records every customer action;  however fraudsters frequently use disguises to avoid being 
+seen. Due to the occulted face caused by helmets, it is difficult to examine and locate them. As a result, our technology wil l automatically identify helmets in 
+surveillance footage and send out SM S messages. In this article, we presented a system for detecting occulted faces caused by helmets in surveillance footage. To  
+detect the person and helmet, we used the object detection weight of the yolo model. Initially, background subtraction was em ploye d to remove unwanted video 
+content. The skin -color ratio and LBP characteristic will then be extracted.  After detection of person then the sms message is send to respect ive bank manager.  
+Key Words: Machine Learning , CNN , Image  Processing. Object detection  model,  CNN  algorithm, YOLO.  
+I. INTRODUCTION:  
+As is well known, automatic teller machines (ATMs) are crucial to current economic activity. It offers a quick and simple way  to handle cost -effective 
+transactions between banks and their clients. Unfortunately, it also gives thieves a simple means to obta in illicit funds. A customer will be required to 
+enter their bank card information and a password when using an ATM. Additionally, each ATM has a surveillance system that rec ords the consumer's 
+face information for security purposes. However, when a frauds ter uses an ATM to conduct an illicit transaction, they typically cover their faces with 
+helmets, face masks, or other items to prevent the surveillance system from capturing their facial information. Therefore, it  won't fulfil the purpose of the 
+surveilla nce system.  
+In the past, the usage of ATM services grew quickly because they provided clients with a more convenient option to withdraw m oney at any time (24 
+hours a day, 7 days a week). The banking industry has adjusted to the rise of digital transaction s. However, a lot of security issues plague the ATM 
+service, which has an impact on the entire banking industry. Due to ATM crimes such card skimming, cash trapping, and shoulde r surfing, secure financial 
+transactions are not guaranteed. The rate of theft and robbery is rising every year, according to a new report. Due to a lack of protection, frauds occur 
+frequently at ATM centres. According to historical data, 5500 fraud cases are reported annually.  
+The implementation of automatic helmet detection in CCTV  footage at ATM Center is suggested despite difficulties with video quality, lighting, and 
+occlusion. In the back, significant work has been done in the fields of tracking and moving object detection with CCTV survei llance applications . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426 April  2023                                          2422  
+ 
+ Direction Flow  
+The main objective of the proposed effort is to deploy surveillance cameras in ATM outlets to identify people wearing safety helmets. Combining deep 
+learning models with machine vision makes this possible. The used model is YOLO's pre -trained object detect ion, which can identify over 3000 different 
+object classes. Through the use of Region Based Convolutional Neural Networks (R -CNN), this model was pre -trained. The system receives data from a 
+live surveillance stream. A SMS alert message is sent to the cont rol room or monitoring team when a person is observed to be wearing a helmet. The 
+primary goal of the work is to prevent suspicious be haviour  or ATM robberies.  
+Three main steps make up the work's implementation. The first one is applying the YOLO model to  find the Helmet object and segmenting it for further 
+analysis. The segmented image is then used to determine whether the user in the ATM outlet is wearing a helmet by looking for  the skin tone inside the 
+detected object. If a person is found at the last s tage, an SMS alert is sent to the monitoring team.  
+II. RELATED WORK:  
+An summary of the literature review is provided in this chapter. Some of the researchers' pertinent work is represented in th is chapter.  
+Researchers have explored several of the currently  used strategies for ATM monitoring systems; a few of them are covered below.  
+1.The conventional state -of-the-art image processing algorithms available for occluded and covered face detection, human abnormal behaviour  analysis, 
+and illegal object detection may not work for ATM having different environment, abnormal gestures, and crime devices, accordi ng to Sikandar's paper 
+"ATM crime detection using image processing integrated video surveillance: a systematic review" p ublished on 2018.  
+2.In his paper "Automatic Detection of Bike -riders Without Helmet Using Surveillance Videos in Real -time" published in 2016, Dahiya provided a 
+framework for the automatic detection of bike -riders without helmet utilising surveillance vide os in real time. The suggested method initially uses 
+backdrop removal and object segmentation to identify bike riders in surveillance video.  
+3.In his study "Helmet Violation Processing Using Deep Learning" published in 2018, Dharma Raj suggested using dee p convolutional neural networks 
+(CNNs) and image processing to identify motorbike riders who are not wearing helmets. The system includes motorbike detection , a classification of 
+riders wearing helmets or not, and motorcycle licence plate identification.  
+4.In his work "Helmet Detection on Two -Wheeler Riders Using Machine Learning" published in 2018, Ramesh Babu presented a system that would use 
+machine learning and image processing to identify two -wheeler riders who were not wearing helmets.  
+5.Jie Li sug gested a safety helmet wearing detection approach based on image processing and machine learning in his 2017 work, "Safety he lmet wearing 
+detection based on image processing and machine learning". The ViBe background modelling technique is initially used t o find moving objects in a 
+power substation's fixed surveillance camera's field of view. The Histogram of Oriented Gradient (HOG) feature is retrieved t o describe the  
+Inner person after acquiring the motion zone of interest.  
+III. DESIGN METHODOLOGY:  
+The live stream of video input on the side that is red for detection makes it difficult to identify helmet wear on ATM outlet s. The method for fraud 
+detection needs to be swift and effective. This is accomplished by incorporating the machine vision notion into Python.                        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426 April  2023                                          2423  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Architecture of proposed work  
+System architecture showing all operational modules, including the input from the camera, object detection, picture pre -processing, skin part detection, 
+and modules for helmet wear.  
+Following the modules below is the helmet wear detecting module.  
+1.Dataset input  
+2.Object detection  
+3.Image pre -processing  
+4.Helmet wear detection  
+1] DATASET INPUT:  
+A live stream of webcam video is the dataset being examined for implementation. Since our project's goal is to detect in real -time, live stream video was 
+also proposed as part of the effort.  
+2] DETECTION OF OBJECTS:  
+The input of the video stream is taken into account in the object detection module. CNN algorithms are used to find items in the input video stream, and 
+they typically utilise regions to localise the objects inside the image. The network selectively scans those areas of the image that have a higher likelihood 
+of containing an object, not the entire picture.  
+Yolo first pulls an image from the video stream as an input. The supplied image is then divided into grids by the framework. On each grid, image 
+categ orization and localization are applied. The bounding boxes and accompanying class probabilities for the object are then predi cted by YOLO.We 
+provide the model a picture during the testing phase, and we then execute forward propagation until we receive an o utput y. The class_object=helmet was 
+specified.  
+3] PRE -PROCESSING  OF IMAGES: Following object detection, the image is saved as image.jpg and pre -processed for the following module. NumPy 
+is used to generate a mask and read the image's height and breadth while also detecting the foreground and background. To obtain the background image, 
+which is saved as background.jpg, the image is subjected to background subtraction.  
+International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426 April  2023                                          2424  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LOCALIZED  OBJECT  IMAGE  PRE_PROCESSING  
+After removing the background from the video and separating the person from it, the actual face must be detected with the helmet detected and classified 
+before feature extraction is needed to identify the helmet. Depending on the classification, an alarm will be generated if th e detected ob ject is a helmet.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Skin portion detection  
+ 
+4] WEAR OF HELMETS DETECTION:  
+This module accepts a background -removed image as input, converts the image using the Hue Saturation value, COLOR_BGR2HSV, and detects the 
+skin region. By determining the height and  width of the skin region, the threshold is determined to apply regardless of whether the person is wearing a 
+helmet. We set the fixed value for this threshold to be 10. The bank manager's mobile number receives a warning message once the skin region is fo und 
+in the object.  
+We incorporated the following blocks of code to send SMS messages using fastsms.com.  
+headers = {'authorization': "02SkmHrLIzofa4seCT",'Content -Type': "application/x -www -form -urlencoded",'Cache -Control': "no -cache",}  
+response = requests .request("POST", url, data=payload, headers=headers)  
+print(response.text)  
+ALGORITHM: HELMET WEAR DETECTION  
+Step 1: The trained object model YOLO is taken for object detection and define class value = "Helmet"  
+Step 2: Web Camera open and taken input frames  
+Step 3: Detect object based on DNN object detection  
+if confidence value >= 0.92  
+detect object  
+else 
+no helmet object  
+International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426 April  2023                                          2425  
+ 
+ Step 4: Crop object and save image and remove background  
+Step 5: Load the background removed image and check skin through HSV color value  
+Step 6: define upper and lower boundary values for skin  
+Step 7: Draw a bounding rectangle and check height and width  if height & width >threshold skin detected  
+Step 8:  Send SMS alert for helmet wear detection  
+IV.    RESULTS AND DISCUSSION S: 
+As a real -time monitoring application taking web camera input, safety helmet  
+wear monitoring for ATM security has been presented. The live video stream is captured as still images, and CNN is suggested for object detection on 
+each image. The only objec t presented for work is Helmet, which is recognised and extracted with the region of proposal. This may detect several things  
+on input frames. To detect wear, this is analysed further. According to test results, a safety helmet may be detected with reason able accuracy when 
+someone is wearing one. This application's deployment and maintenance costs are lower than those of competing systems  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The application home page is shown in the image above, where users can submit their information to be stored in the application database and used to 
+send alert SMS. This user interface was made to be simple for individuals to use in TK. When the application is launched, a c amera window appears and 
+begins to continuously monitor.  
+The image below shows the application detecting a safety helmet while it is running with input image frame . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+When the algorithm finds the helmet with a confidence level of 90 or above, the image is cropped for further processing. The confidence level for object 
+detection for discovering Saf ety Helmet is reported as 90%. Similar to this, in an experimental investigation, the height and width of the skin region of 
+the proposal are tracked over the course of ten experiments to determine the detection threshold for skin. This accurately va lidate s the helmet -wearing 
+individual.  
+ 
+ 
+  Detection  Parameter  Value  Result  
+Object (Helmet)  Confidence  >= 0.92  Helmet detected  
+Object (Helmet)  Confidence  < 0.92  No detection  
+Skin Detection  Height  X Width  >= 10  Skin detected  
+Skin Detection  Height X Width  < 10 No Skin detected  
+International Journal of Research Publication and Reviews, Vol 4, no 4, pp 2 421-2426 April  2023                                          2426  
+ 
+ Confidence Value for Object and skin detections  
+When users are wearing the regular model Helmet, safety helmet detection operates better. The infrastructure must be well -built to handle the live video 
+feed with caution, thus the detection latency may increase over time. In additional research, the system latency on the detecting part can be decreased.  
+Hence  after detection of person and helmet and the alerts are send to respect ed bank manager, screen shot given below .  
+ 
+ 
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Screen Shot  
+V. CONCLUSION : 
+For a fix on helmet and mask detection for the ATM centre's security, Real -time detection is proposed in the proposed study, using video as the input. 
+Web cameras are used, and OpenCV is used to interpret the data. Yolo objected model, which is a globally accessible trained model for several classes 
+of objects, is utilised in this instance to detect helmets. Following image pre -processing, the skin area is recognised. To identify skin, we shall apply HSV 
+colour conversion and look forward to additional processing. then will determine the skin -color ratio. It is then compared against the threshold, and any 
+changes are notified to the manager. According to the experimental findings, an alert is produced when t he height and width of the skin region are equal 
+to or higher than the threshold. The detection alarm message transmitted to the control centre is shown using experimental re sults.  
+REFERENCES : 
+[1] Che -Yen Wen, Shih -Hsuan Chiu, Jiun -Jian Liaw and Chuan -Pin Lu, "The safety helmet detection for ATM's surveillance system via the modified 
+Hough transform," IEEE 37th Annual 2003 International Carnahan Conference onSecurity Technology, 2003. Proceedings., 2003, pp . 364 -369. 
+[2] Wen, Che -Yen & Chiu, Shih -Hsuan & T seng, Yi -Ren & Lu, Chuan -Pin. (2005). The Mask Detection Technology for Occluded Face Analysis in the 
+Surveillance System. Journal of forensic sciences. 50. 593 -601. 10.1520/JFS2004409.  
+[3] Jae Kyu Suhr, Sungmin Eum, Ho Gi Jung, Gen Li, Gahyun Kim, Jaihie Kim,Recognizability assessment of facial images for automated teller machine 
+applications, Pattern Recognition,Volume 45, Issue 5,2012,Pages 1899 -1914,ISSN 0031 -3203,  
+[4] J. Li et al., "Safety helmet wearing detection based on image processing and machine learning," 2017 Ninth International Conference on Advanced 
+Computational Intelligence (ICACI), Doha, 2017, pp. 201 -205. 
+[5] CHAROENPONG, Theekapun; SANITTHAI, Patarida. “A New Algorithm to Detect Occluded Face from a Head Viewpoint using Hough T ransform 
+and Skin Ratio”. Walailak Journal of Science and Technology (WJST), [S.l.], v. 12, n. 1, p. 35 -49, oct. 2014. ISSN 2228 -835X  
+[6] Rui Min, Angela D'Angelo, Jean -Luc Dugelay, “Efficient scarf detection prior to face recognition”, EUSIPCO, 18th European Signal  Processing 
+Conference, Denmark, France, pp. 259 -263, Aug. 2010  
+[7] Jia H., Martinez A. M., “Support vector machines in face recognition with occlusions”, Proceedings of the IEEE Computer S ociety conference on 
+Computer Vision and Pattern Recognition Worksh ops, June 2009, pp.136 -141. 
+ 
+ 
